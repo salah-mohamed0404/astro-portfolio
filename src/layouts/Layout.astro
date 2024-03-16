@@ -1,0 +1,36 @@
+---
+import i18next from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
+
+const lang = i18next.language;
+const dir = i18next.dir(lang);
+const fontFamilyClass = lang === 'en' ? 'font-en' : 'font-ar';
+
+const titleDefaultAr = 'صلاح | مطور واجهة المستخدم';
+const titleDefaultEn = 'Salah | Frontend Developer';
+const title = Astro.props?.title || (lang === 'en' ? titleDefaultEn : titleDefaultAr);
+
+const descriptionDefaultAr = "مرحبًا في معرض اعمالي! اكتشف مهاراتي ومشاريعي، حيث أنا متخصص في لغات البرمجة مثل JavaScript و ReactJS. كمطور واجهة مستخدم، أحب أن أصمم تجارب واجهة ويب تكون مشوقة وسهلة الاستخدام. تفضل بزيارة أعمالي لترى كيف أقدم الابتكار في نظم المعلومات من خلال تصاميم مبتكرة، وواجهات متجاوبة، وتفاعلات مستخدم سلسة. دعنا نتواصل ونتحاور حول كيف يمكنني المساهمة في مشروع تطوير الويب القادم الخاص بك.";
+const descriptionDefaultEn = "Welcome! I'm a Front-End Developer passionate about JavaScript and ReactJS. Explore my coding journey and projects here. Let's embark on a digital adventure together!";
+const description = Astro.props?.description ||(  lang === 'en' ? descriptionDefaultEn : descriptionDefaultAr);
+---
+
+<!doctype html>
+<html lang={lang} dir={dir} class={fontFamilyClass}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href={`https://fonts.googleapis.com/css2?${lang == 'en' ? 'family=Montserrat:ital,wght@0,100..900;1,100..900': 'family=Almarai:wght@300;400;700;800' }&display=swap`} rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<HeadHrefLangs />
+	</head>
+	<body class="bg-slate-100 dark:bg-neutral-950 transition-colors">
+		<h1>Salah</h1>
+		<slot />
+	</body>
+</html>
