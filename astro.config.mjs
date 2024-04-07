@@ -6,5 +6,7 @@ import astroI18next from "astro-i18next";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [tailwind(), react(), mdx(), astroI18next()],
+	integrations: [tailwind({
+      applyBaseStyles: false,
+    }), react(), mdx(), astroI18next()],
 });
