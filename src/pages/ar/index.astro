@@ -1,10 +1,10 @@
 ---
-import { changeLanguage } from "i18next";
+import { changeLanguage, setDefaultNamespace } from "i18next";
 import Layout from "../../layouts/Layout.astro";
 
 changeLanguage("ar");
+
+setDefaultNamespace("home");
 ---
 
-<Layout title="Home | Frontend Developer">
-	
-</Layout>
+<Layout>TEST</Layout>
