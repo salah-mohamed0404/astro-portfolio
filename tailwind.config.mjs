@@ -2,12 +2,7 @@ import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColo
 
 /** @type {import('tailwindcss').Config} */
 export const darkMode = ["class"];
-export const content = [
-	"./pages/**/*.{ts,tsx}",
-	"./components/**/*.{ts,tsx}",
-	"./app/**/*.{ts,tsx}",
-	"./src/**/*.{ts,tsx}",
-];
+export const content = ["./src/**/*.{ts,tsx,js,jsx,astro,mdx}"];
 export const prefix = "";
 export const theme = {
 	container: {
