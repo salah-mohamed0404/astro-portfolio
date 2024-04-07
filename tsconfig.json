@@ -9,6 +9,7 @@
 			"@layouts/*": ["src/layouts/*"],
 			"@utils/*": ["src/utils/*"],
 			"@constants/*": ["src/constants/*"],
+			"@store": ["src/store"],
 			"@content/*": ["src/content/*"],
 			"@assets/*": ["src/assets/*"],
 			"@translations/*": ["public/locales/*"]
